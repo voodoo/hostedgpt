@@ -28,6 +28,10 @@ class User < ApplicationRecord
   accepts_nested_attributes_for :credentials
   serialize :preferences, coder: JsonSerializer
 
+  def truncated_name
+    name.full.truncate(20)
+  end
+
   def preferences
     attributes["preferences"].with_defaults(dark_mode: "system")
   end

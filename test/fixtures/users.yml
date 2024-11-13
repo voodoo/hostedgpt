@@ -14,3 +14,9 @@ taylor:
   first_name: Taylor
   registered_at: 2024-05-31 08:40:05
   preferences: {}
+
+long_name:
+  first_name: Really long first name
+  last_name: Last name
+  registered_at: 2023-12-19 08:40:05
+  preferences: {}

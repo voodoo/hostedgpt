@@ -1,6 +1,10 @@
 require "test_helper"
 
 class UserTest < ActiveSupport::TestCase
+  test "truncated_name" do
+    assert_equal "Really long first...", users(:long_name).truncated_name
+  end
+
   test "has an associated person" do
     assert_instance_of Person, users(:keith).person
   end
